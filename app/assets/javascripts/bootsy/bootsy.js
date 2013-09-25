@@ -165,7 +165,7 @@ window.Bootsy.Area = function ($el) {
         customCommand: function (locale, options) {
           var size = (options && options.size) ? ' btn-'+options.size : '';
           return "<li>" +
-            "<a class='btn" + size + "' data-wysihtml5-command='customCommand' title='" + locale.image.insert + "' tabindex='-1'><i class='icon-picture'></i></a>" +
+            "<a class='btn btn-default" + size + "' data-wysihtml5-command='customCommand' title='" + locale.image.insert + "' tabindex='-1'><i class='glyphicon glyphicon-picture'></i></a>" +
           "</li>";
         }
       };
@@ -180,9 +180,9 @@ window.Bootsy.Area = function ($el) {
       this.imageGalleryModal.find('a.destroy_btn').click(this.progressBar);
 
       this.imageGalleryModal.modal({show: false});
-      this.imageGalleryModal.on('shown', this.refreshGallery);
+      this.imageGalleryModal.on('shown.bs.modal', this.refreshGallery);
 
-      this.imageGalleryModal.on('hide', function () {
+      this.imageGalleryModal.on('hide.bs.modal', function () {
         self.progressBar();
         self.editor.currentView.element.focus();
       });

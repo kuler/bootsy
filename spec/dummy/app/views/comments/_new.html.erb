@@ -15,14 +15,14 @@
 
   <div class="field">
     <%= f.label :author %></br>
-    <%= f.text_field :author, :class => 'span6' %>
+    <%= f.text_field :author, :class => 'col-md-6' %>
   </div>
   <div class="field">
     <%= f.label :content %></br>
-    <%= f.bootsy_area :content, rows: 8, :class => 'span6', container: comment.post %>
+    <%= f.bootsy_area :content, rows: 8, :class => 'col-md-6', container: comment.post %>
   </div>
 
   <div class="actions">
-    <%= f.submit :class => 'btn' %>
+    <%= f.submit :class => 'btn btn-default' %>
   </div>
 <% end %>

@@ -6,13 +6,13 @@
   <ul class="thumbnails">
     <% gallery.images.each do |image| %>
       <li class="dropdown" data-id="<%= image.id %>">
-        <%= link_to image_tag(image.image_file.thumb.url), '#', :class => 'thumbnail', data: { toggle: 'dropdown'} %>
+        <%= link_to image_tag(image.image_file.thumb.url), '#', :class => 'img-thumbnail', data: { toggle: 'dropdown'} %>
         <ul class="dropdown-menu" role="menu">
           <li class="nav-header"><%= t 'bootsy.image.size' %></li>
           <% Bootsy.image_versions_available.each do |size| %>
             <li class="dropdown-submenu">
               <%= link_to '#' do %>
-                <i class="icon-picture"></i>
+                <i class="glyphicon glyphicon-picture"></i>
                 <%= t "bootsy.image.#{size}" %>
               <% end %>
               <ul class="dropdown-menu">
@@ -30,7 +30,7 @@
             <li class="divider"></li>
             <li>
               <%= link_to image, method: :delete, remote: true, data: { confirm: t('bootsy.image.confirm.destroy')}, tabindex: '-1', :class => 'destroy_btn' do %>
-                <i class="icon-trash"></i>
+                <i class="glyphicon glyphicon-trash"></i>
                 <%= t('bootsy.action.destroy') %>
               <% end %>
             </li>
