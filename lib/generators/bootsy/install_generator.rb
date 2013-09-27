@@ -17,7 +17,7 @@ module Bootsy
           skip_if: 'require bootsy',
           content: "\n//= require bootsy",
           position: {after: '//= require jquery_ujs'}},
-         {original: 'app/assets/stylesheets/application.css',
+         {original: 'app/assets/stylesheets/application.scss',
           skip_if: 'require bootsy',
           content: "\n *= require bootsy",
           position: {after: '*= require_self'}}]. each do |params|
